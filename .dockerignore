@@ -1,0 +1,6 @@
+.trunk
+Dockerfile
+compose.yml
+LICENSE
+README.md
+.gitignore

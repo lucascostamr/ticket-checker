@@ -1,0 +1,18 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/target
+      - .:/app
+    command: sh
+    tty: true
+    depends_on:
+      - database
+  
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: example
