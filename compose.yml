@@ -7,6 +7,8 @@ services:
     volumes:
       - /app/target
       - .:/app
+    env_file:
+      - .env
     command: sh
     tty: true
     depends_on:
@@ -15,4 +17,6 @@ services:
   database:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
