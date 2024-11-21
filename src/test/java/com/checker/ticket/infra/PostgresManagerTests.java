@@ -17,4 +17,15 @@ public class PostgresManagerTests {
            System.err.print(e);
         }
     }
+
+    @Test
+    void should_close_connection_on_success() {
+        try {
+            Connection conn = PostgresManager.connect();
+            PostgresManager.disconnect();
+            assertTrue(conn.isClosed());
+        } catch (SQLException e) {
+           System.err.print(e);
+        }
+    }
 }
