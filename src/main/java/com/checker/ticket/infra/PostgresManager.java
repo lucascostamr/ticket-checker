@@ -29,4 +29,9 @@ public class PostgresManager {
         if(conn == null || conn.isClosed()) init();
         return conn;
     }
+
+    public static void disconnect() throws SQLException{
+        if(conn == null || conn.isClosed()) return;
+        conn.close();
+    }
 }
