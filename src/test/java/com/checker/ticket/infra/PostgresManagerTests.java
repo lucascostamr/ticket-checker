@@ -9,23 +9,15 @@ import org.junit.jupiter.api.Test;
 
 public class PostgresManagerTests {
     @Test
-    void should_return_valid_connection_on_success() {
-        try {
-            Connection conn = PostgresManager.connect();
-            assertTrue(conn.isValid(0));
-        } catch (SQLException e) {
-           System.err.print(e);
-        }
+    void should_return_valid_connection_on_success() throws SQLException{
+        Connection conn = PostgresManager.connect();
+        assertTrue(conn.isValid(0));
     }
 
     @Test
-    void should_close_connection_on_success() {
-        try {
-            Connection conn = PostgresManager.connect();
-            PostgresManager.disconnect();
-            assertTrue(conn.isClosed());
-        } catch (SQLException e) {
-           System.err.print(e);
-        }
+    void should_close_connection_on_success() throws SQLException{
+        Connection conn = PostgresManager.connect();
+        PostgresManager.disconnect();
+        assertTrue(conn.isClosed());
     }
 }
