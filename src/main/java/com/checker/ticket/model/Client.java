@@ -1,3 +1,13 @@
 package com.checker.ticket.model;
 
-public record Client(String name, int tickets) {}
+public class Client {
+    private int amountExchange = 0;
+
+    public Client(int amountExchange) {
+        this.amountExchange = amountExchange;
+    }
+
+    public int getAmountExchange() {
+        return this.amountExchange;
+    }
+}
