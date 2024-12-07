@@ -1,6 +1,5 @@
 package com.checker.ticket.repository;
 
-import com.checker.ticket.repository.protocols.CheckAmountOrdersRepository;
 import com.checker.ticket.repository.protocols.CheckAmountTicketsRepository;
 
 import org.springframework.stereotype.Repository;
