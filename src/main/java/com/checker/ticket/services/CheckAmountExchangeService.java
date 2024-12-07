@@ -14,7 +14,7 @@ import com.checker.ticket.services.protocols.CheckAmountExchanges;
 class CheckAmountExchangesService implements CheckAmountExchanges {
 
     @Autowired
-    @Qualifier("json-repository")
+    @Qualifier("db-repository")
     private CheckAmountExchangeRepository checkAmountExchangeRepository;
 
     @Override

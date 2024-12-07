@@ -3,6 +3,8 @@ package com.checker.ticket.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +21,7 @@ class ExchangeController implements Controller {
     private CheckAmountExchanges checkAmountExchanges;
 
     @Override
+    @CrossOrigin(origins = "*")
     @PostMapping("/exchange")
 
     public ResponseEntity<Object> handle(@RequestBody Request request) {
