@@ -25,7 +25,7 @@ public class TicketController implements Controller{
 
     public ResponseEntity<Object> handle(@RequestBody Request request) {
         try {
-            int clientId = (int) request.body();
+            int clientId = (int) request.clientId();
             boolean response = checkAmountTickets.hasEnoughTickets(clientId);
             return ResponseEntity.ok(response);
         } catch (ClassCastException e) {

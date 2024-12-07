@@ -25,7 +25,7 @@ public class OrderController implements Controller{
 
     public ResponseEntity<Object> handle(@RequestBody Request request) {
         try {
-            int clientId = (int) request.body();
+            int clientId = (int) request.clientId();
             int response = checkAmountOrders.getAmountOrders(clientId);
             return ResponseEntity.ok(response);
         } catch (ClassCastException e) {
