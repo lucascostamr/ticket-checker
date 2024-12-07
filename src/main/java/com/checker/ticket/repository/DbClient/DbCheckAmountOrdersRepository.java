@@ -1,4 +1,4 @@
-package com.checker.ticket.repository;
+package com.checker.ticket.repository.DbClient;
 
 import com.checker.ticket.repository.protocols.CheckAmountOrdersRepository;
 
