@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 import com.checker.ticket.infra.PostgresManager;
 
-@Repository
+@Repository("db-tickets-repository")
 public class DbCheckAmountTicketsRepository implements CheckAmountTicketsRepository{
     @Override
     public int getAmountTickets(int clientId) throws SQLException{

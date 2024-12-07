@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 import com.checker.ticket.infra.PostgresManager;
 
-@Repository("db-repository")
+@Repository("db-exchange-repository")
 public class DbCheckAmountExchangeRepository implements CheckAmountExchangeRepository{
     @Override
     public int getAmountExchangeByClientId(int clientId) throws SQLException{

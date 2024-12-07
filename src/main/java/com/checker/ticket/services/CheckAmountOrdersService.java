@@ -1,8 +1,7 @@
 package com.checker.ticket.services;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.checker.ticket.model.Order;
@@ -13,10 +12,11 @@ import com.checker.ticket.services.protocols.CheckAmountOrders;
 class CheckAmountOrdersService implements CheckAmountOrders {
 
     @Autowired
+    @Qualifier("json-orders-repository")
     private CheckAmountOrdersRepository checkAmountOrdersRepository;
 
     @Override
-    public int getAmountOrders(int clientId) throws SQLException{
+    public int getAmountOrders(int clientId) throws Exception{
         int amountExchange = this.checkAmountOrdersRepository.getAmountOrdersByClientId(clientId);
         Order exchange = new Order(amountExchange);
         return exchange.getAmountOrders();

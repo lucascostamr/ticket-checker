@@ -1,7 +1,5 @@
 package com.checker.ticket.services;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -14,7 +12,7 @@ import com.checker.ticket.services.protocols.CheckAmountExchanges;
 class CheckAmountExchangesService implements CheckAmountExchanges {
 
     @Autowired
-    @Qualifier("db-repository")
+    @Qualifier("json-exchange-repository")
     private CheckAmountExchangeRepository checkAmountExchangeRepository;
 
     @Override
