@@ -21,7 +21,7 @@ public class TicketController implements Controller{
     private CheckAmountTickets checkAmountTickets;
 
     @Override
-    @PostMapping("/ticket")
+    @PostMapping("/enough-tickets")
 
     public ResponseEntity<Object> handle(@RequestBody Request request) {
         try {
